@@ -84,13 +84,11 @@ If you don't want to install the dependencies on your system, this can also be o
 At a command prompt, run
 
 ```bash
-xelatex {your-cv}.tex
-```
+make docker-image
 
-Or using docker:
+# make clean
 
-```bash
-docker run --rm --user $(id -u):$(id -g) -i -w "/doc" -v "$PWD":/doc thomasweise/texlive make
+make resume # | cv | coverletter | all
 ```
 
 In either case, this should result in the creation of ``{your-cv}.pdf``
