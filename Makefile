@@ -1,6 +1,6 @@
 .PHONY: all
 
-CC = docker run --rm -v .:/doc docker-image-for-awesome-cv-by-posquit0 xelatex
+CC = docker run --rm -v .:/data -w "/data" thomasweise/docker-texlive-full xelatex
 EXAMPLES_DIR = examples
 RESUME_DIR = examples/resume
 CV_DIR = examples/cv
@@ -20,6 +20,3 @@ coverletter: $(EXAMPLES_DIR)/coverletter.tex
 
 clean:
 	rm -rf $(EXAMPLES_DIR)/*.pdf
-
-docker-image:
-	docker build -t 'docker-image-for-awesome-cv-by-posquit0' .

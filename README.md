@@ -84,8 +84,6 @@ If you don't want to install the dependencies on your system, this can also be o
 At a command prompt, run
 
 ```bash
-make docker-image
-
 # make clean
 
 make resume # | cv | coverletter | all
